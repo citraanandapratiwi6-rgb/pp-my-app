@@ -1,312 +1,294 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Privacy Policy - Money Mate</title>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kebijakan Privasi – Money Mate</title>
+  <meta name="description" content="Kebijakan privasi aplikasi Money Mate, aplikasi pencatat keuangan pribadi.">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root {
+      --bg: #f6f9fc;
+      --surface: #ffffff;
+      --text: #1c2b3a;
+      --muted: #56687a;
+      --navy: #173b5d;
+      --blue: #087ac0;
+      --sky: #2ca7e0;
+      --line: #d9e3ec;
+      --hero: #0c2945;
+      --mark: #fff3c4;
+      --mark-text: #6b4e00;
+      --font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     }
 
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0e1822;
+        --surface: #15232f;
+        --text: #e6eef5;
+        --muted: #9db0c0;
+        --navy: #9fd4f3;
+        --blue: #4cb6ee;
+        --line: #263747;
+        --hero: #0a1c2e;
+        --mark: #4a3a08;
+        --mark-text: #ffe08a;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f5f7fb;
-      color: #333;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 16px;
       line-height: 1.7;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 35px;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    }
+    a { color: var(--blue); }
+    a:focus-visible { outline: 3px solid var(--sky); outline-offset: 2px; border-radius: 4px; }
 
-    .header {
-      text-align: center;
-      padding-bottom: 25px;
-      margin-bottom: 30px;
-      border-bottom: 1px solid #e5e5e5;
+    /* Header */
+    .hero {
+      background: var(--hero);
+      color: #f2f8fd;
+      padding: 56px 20px 64px;
     }
+    .hero h1 {
+      font-size: clamp(1.9rem, 5vw, 2.8rem);
+      line-height: 1.15;
+      margin: 0 0 14px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .hero p { margin: 0; color: #cfe3f2; }
+    .hero .meta { margin-top: 18px; font-size: 0.9rem; color: #9fc2dc; }
 
-    .logo {
-      width: 65px;
-      height: 65px;
-      margin: 0 auto 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #eaf2ff;
-      border-radius: 16px;
-      font-size: 32px;
-    }
-
-    h1 {
-      color: #1d3557;
-      font-size: 28px;
-      margin-bottom: 5px;
-    }
-
-    .app-name {
-      color: #2878ff;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .date {
-      color: #888;
-      font-size: 13px;
-      margin-top: 5px;
-    }
-
-    section {
-      margin-bottom: 28px;
-    }
+    /* Layout */
+    .wrap { max-width: 760px; margin: 0 auto; }
+    main { max-width: 760px; margin: 0 auto; padding: 0 20px 64px; }
+    p, li { max-width: 68ch; }
 
     h2 {
-      color: #1d3557;
-      font-size: 19px;
-      margin-bottom: 10px;
+      font-size: 1.35rem;
+      color: var(--navy);
+      margin: 44px 0 10px;
+      line-height: 1.3;
+      font-weight: 800;
+    }
+    h3 { font-size: 1.05rem; margin: 22px 0 6px; }
+
+    /* Ringkasan */
+    .summary {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--sky);
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin-top: -32px;
+      position: relative;
+    }
+    .summary h2 { margin-top: 0; }
+    .summary ul { margin: 0; padding-left: 20px; }
+    .summary li { margin: 6px 0; }
+
+    /* Tabel */
+    .table-wrap {
+      overflow-x: auto;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      margin: 14px 0;
+    }
+    table { border-collapse: collapse; width: 100%; min-width: 620px; font-size: 0.93rem; line-height: 1.5; }
+    th, td { text-align: left; padding: 12px 14px; vertical-align: top; border-bottom: 1px solid var(--line); }
+    th { color: var(--navy); font-weight: 700; background: rgba(44, 167, 224, 0.1); }
+    tr:last-child td { border-bottom: 0; }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 2px 9px;
+      border-radius: 99px;
+      white-space: nowrap;
+    }
+    .tag-local { background: rgba(31, 157, 107, 0.16); color: #17835a; }
+    .tag-cloud { background: rgba(44, 167, 224, 0.18); color: var(--blue); }
+    .tag-ai    { background: rgba(139, 92, 246, 0.16); color: #7140d6; }
+
+    @media (prefers-color-scheme: dark) {
+      .tag-local { color: #5fd6a3; }
+      .tag-ai { color: #b79bff; }
     }
 
-    p {
-      color: #555;
-      font-size: 15px;
-      margin-bottom: 10px;
+    /* Catatan & placeholder */
+    .note {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 16px 0;
+    }
+    .placeholder {
+      background: var(--mark);
+      color: var(--mark-text);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-weight: 700;
     }
 
-    ul {
-      padding-left: 25px;
-      color: #555;
-    }
-
-    li {
-      font-size: 15px;
-      margin-bottom: 7px;
-    }
-
-    strong {
-      color: #333;
-    }
-
-    .footer {
-      border-top: 1px solid #e5e5e5;
-      padding-top: 20px;
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 20px;
       text-align: center;
-      color: #999;
-      font-size: 13px;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        margin: 15px;
-        padding: 22px 18px;
-      }
-
-      h1 {
-        font-size: 24px;
-      }
-
-      h2 {
-        font-size: 18px;
-      }
-
-      p,
-      li {
-        font-size: 14px;
-      }
+      color: var(--muted);
+      font-size: 0.88rem;
     }
   </style>
 </head>
-
 <body>
 
-  <div class="container">
-
-    <div class="header">
-      <div class="logo">💰</div>
-
-      <h1>Privacy Policy</h1>
-
-      <div class="app-name">
-        Money Mate
-      </div>
-
-      <div class="date">
-        Terakhir diperbarui: 5 Oktober 2026
-      </div>
-    </div>
-
-
-    <section>
-      <h2>1. Tentang Money Mate</h2>
-
-      <p>
-        Money Mate adalah aplikasi pencatatan keuangan yang membantu
-        pengguna mencatat dan mengelola keuangan sehari-hari, seperti
-        pemasukan dan pengeluaran.
-      </p>
-    </section>
-
-
-    <section>
-      <h2>2. Data yang Dicatat</h2>
-
-      <p>
-        Money Mate dapat menyimpan data yang dimasukkan oleh pengguna
-        untuk keperluan pencatatan keuangan, seperti:
-      </p>
-
-      <ul>
-        <li>Data pemasukan.</li>
-        <li>Data pengeluaran.</li>
-        <li>Nominal transaksi.</li>
-        <li>Kategori transaksi.</li>
-        <li>Tanggal transaksi.</li>
-        <li>Catatan atau keterangan transaksi.</li>
-        <li>Data lain yang diperlukan untuk menjalankan aplikasi.</li>
-      </ul>
-    </section>
-
-
-    <section>
-      <h2>3. Penyimpanan Data</h2>
-
-      <p>
-        Money Mate menggunakan
-        <strong>Capacitor SQLite</strong>
-        untuk menyimpan data aplikasi secara lokal pada perangkat pengguna.
-      </p>
-
-      <p>
-        Data transaksi yang dicatat melalui aplikasi disimpan dalam
-        database lokal pada perangkat dan digunakan untuk menampilkan
-        serta mengelola informasi keuangan pengguna.
-      </p>
-    </section>
-
-
-    <section>
-      <h2>4. Penggunaan Data</h2>
-
-      <p>
-        Data yang disimpan digunakan untuk:
-      </p>
-
-      <ul>
-        <li>Menampilkan riwayat pemasukan dan pengeluaran.</li>
-        <li>Menghitung informasi keuangan pengguna.</li>
-        <li>Membantu pengguna memantau transaksi.</li>
-        <li>Menjalankan fitur-fitur yang tersedia dalam aplikasi.</li>
-        <li>Meningkatkan fungsi dan pengalaman penggunaan aplikasi.</li>
-      </ul>
-    </section>
-
-
-    <section>
-      <h2>5. Keamanan Data</h2>
-
-      <p>
-        Money Mate berupaya menjaga keamanan data pengguna.
-        Data transaksi disimpan menggunakan database SQLite
-        pada perangkat pengguna.
-      </p>
-
-      <p>
-        Pengguna juga bertanggung jawab untuk menjaga keamanan
-        perangkat, termasuk menggunakan PIN, pola, kata sandi,
-        atau metode keamanan lainnya.
-      </p>
-    </section>
-
-
-    <section>
-      <h2>6. Berbagi Data dengan Pihak Ketiga</h2>
-
-      <p>
-        Money Mate tidak menjual atau menyewakan data transaksi
-        keuangan pengguna kepada pihak lain untuk tujuan komersial.
-      </p>
-
-      <p>
-        Apabila di kemudian hari terdapat layanan pihak ketiga
-        yang membutuhkan akses terhadap data pengguna, kebijakan
-        privasi ini akan diperbarui sesuai dengan penggunaan
-        layanan tersebut.
-      </p>
-    </section>
-
-
-    <section>
-      <h2>7. Penghapusan Data</h2>
-
-      <p>
-        Pengguna dapat menghapus data transaksi melalui fitur
-        yang tersedia di dalam aplikasi.
-      </p>
-
-      <p>
-        Karena data disimpan secara lokal menggunakan SQLite,
-        penghapusan aplikasi atau data aplikasi pada perangkat
-        dapat menyebabkan data lokal yang tersimpan tidak dapat
-        dipulihkan.
-      </p>
-    </section>
-
-
-    <section>
-      <h2>8. Privasi Anak</h2>
-
-      <p>
-        Money Mate tidak ditujukan untuk mengumpulkan informasi
-        pribadi anak secara sengaja. Penggunaan aplikasi sebaiknya
-        dilakukan dengan pengawasan orang tua atau wali apabila
-        diperlukan.
-      </p>
-    </section>
-
-
-    <section>
-      <h2>9. Perubahan Kebijakan Privasi</h2>
-
-      <p>
-        Kebijakan Privasi ini dapat diperbarui dari waktu ke waktu
-        untuk menyesuaikan dengan perkembangan fitur dan layanan
-        Money Mate.
-      </p>
-
-      <p>
-        Setiap perubahan akan diperbarui pada halaman ini dengan
-        mencantumkan tanggal pembaruan terbaru.
-      </p>
-    </section>
-
-
-    <section>
-      <h2>10. Hubungi Kami</h2>
-
-      <p>
-        Jika pengguna memiliki pertanyaan, saran, atau keluhan
-        mengenai Kebijakan Privasi Money Mate, pengguna dapat
-        menghubungi pengembang melalui kontak yang tersedia
-        pada aplikasi.
-      </p>
-    </section>
-
-
-    <div class="footer">
-      © 2026 Money Mate. All rights reserved.
-    </div>
-
+<header class="hero">
+  <div class="wrap">
+    <h1>Kebijakan Privasi Money Mate</h1>
+    <p>Money Mate adalah aplikasi pencatat keuangan pribadi. Halaman ini menjelaskan data apa yang diproses aplikasi, di mana data itu disimpan, dan apa yang bisa Anda lakukan terhadap data Anda.</p>
+    <div class="meta">Berlaku sejak 5 Oktober 2026 · Versi aplikasi 1.0.0</div>
   </div>
+</header>
+
+<main>
+
+  <section class="summary" aria-labelledby="ringkas">
+    <h2 id="ringkas">Ringkasan singkat</h2>
+    <ul>
+      <li>Data keuangan Anda (transaksi, kategori, anggaran, tujuan tabungan) disimpan <strong>di perangkat Anda sendiri</strong>, bukan di server kami.</li>
+      <li>Hanya <strong>email dan kata sandi</strong> yang dikirim ke server, yaitu layanan autentikasi Supabase, agar Anda bisa masuk ke akun.</li>
+      <li>Fitur <strong>Insight AI</strong> mengirim ringkasan angka (bukan catatan transaksi) ke Groq, dan hanya saat Anda memintanya.</li>
+      <li>Kami tidak menjual data Anda dan tidak memasang iklan atau pelacak pihak ketiga.</li>
+    </ul>
+  </section>
+
+  <h2>1. Tentang Aplikasi</h2>
+  <p>Money Mate membantu Anda mengatur uang harian dengan mencatat pemasukan dan pengeluaran, membatasi anggaran, serta merencanakan tabungan. Mata uang yang digunakan adalah Rupiah (IDR). Fitur utamanya:</p>
+  <ul>
+    <li><strong>Pencatatan transaksi:</strong> tambah, ubah, hapus, cari, dan filter pemasukan serta pengeluaran, lengkap dengan kategori, tanggal, dan catatan.</li>
+    <li><strong>Kategori:</strong> kategori bawaan (misalnya Makanan &amp; Minuman, Transportasi, Gaji) yang bisa Anda kelola.</li>
+    <li><strong>Anggaran bulanan:</strong> batas pengeluaran per kategori setiap bulan.</li>
+    <li><strong>Statistik dan beranda:</strong> ringkasan arus kas dan proporsi pengeluaran.</li>
+    <li><strong>Tujuan tabungan dan estimasi:</strong> target dana, dana terkumpul, dan perkiraan kapan tujuan tercapai.</li>
+    <li><strong>Insight AI:</strong> analisis singkat pengeluaran bulanan dan rencana tabungan.</li>
+    <li><strong>Akun dan profil:</strong> daftar, masuk, atur ulang kata sandi, foto profil, dan mode gelap.</li>
+    <li><strong>Pengingat harian:</strong> notifikasi pada jam yang Anda pilih untuk mengingatkan Anda mencatat keuangan.</li>
+  </ul>
+
+  <h2>2. Data yang Diproses dan Lokasi Penyimpanannya</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Data</th><th>Dipakai untuk</th><th>Disimpan di</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Transaksi: jenis, nominal, kategori, tanggal, catatan</td>
+          <td>Pencatatan, beranda, statistik</td>
+          <td><span class="tag tag-local">Perangkat Anda</span><br>Database SQLite lokal</td>
+        </tr>
+        <tr>
+          <td>Kategori, anggaran bulanan, tujuan tabungan</td>
+          <td>Anggaran dan perencanaan tabungan</td>
+          <td><span class="tag tag-local">Perangkat Anda</span><br>Database SQLite lokal</td>
+        </tr>
+        <tr>
+          <td>Foto profil</td>
+          <td>Tampilan profil</td>
+          <td><span class="tag tag-local">Perangkat Anda</span><br>Penyimpanan lokal aplikasi. Tidak diunggah ke server kami.</td>
+        </tr>
+        <tr>
+          <td>Mode gelap, jam pengingat, setoran bulanan estimasi tujuan, pilihan “ingat perangkat”</td>
+          <td>Pengaturan dan kenyamanan</td>
+          <td><span class="tag tag-local">Perangkat Anda</span><br>Penyimpanan lokal aplikasi</td>
+        </tr>
+        <tr>
+          <td>Email dan kata sandi</td>
+          <td>Pendaftaran, masuk, atur ulang kata sandi</td>
+          <td><span class="tag tag-cloud">Server Supabase</span><br>Kata sandi disimpan ter-hash oleh Supabase.</td>
+        </tr>
+        <tr>
+          <td>Token sesi masuk</td>
+          <td>Menjaga Anda tetap masuk</td>
+          <td><span class="tag tag-local">Perangkat Anda</span><br>Tersimpan lama bila “ingat perangkat” aktif, hanya selama sesi bila tidak.</td>
+        </tr>
+        <tr>
+          <td>Ringkasan angka untuk Insight AI (lihat bagian 4)</td>
+          <td>Menghasilkan analisis</td>
+          <td><span class="tag tag-ai">Dikirim ke Groq</span><br>Tidak kami simpan.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Kami tidak meminta akses ke lokasi, kontak, mikrofon, atau data pembayaran, dan Money Mate tidak terhubung ke rekening bank Anda. Izin yang mungkin muncul hanyalah <strong>notifikasi</strong> (untuk pengingat harian) dan <strong>pemilihan foto</strong> (untuk foto profil).</p>
+
+  <h2>3. Cara Data Disimpan</h2>
+  <h3>Di perangkat Anda</h3>
+  <p>Data keuangan disimpan dalam database <strong>SQLite</strong> lokal. Di aplikasi Android, database berada di penyimpanan privat aplikasi. Pada versi web, database tersimpan di penyimpanan peramban (IndexedDB). Pengaturan ringan disimpan di penyimpanan lokal aplikasi.</p>
+  <div class="note">
+    <strong>Yang perlu Anda ketahui:</strong> karena data keuangan tidak disinkronkan ke server, data akan <strong>hilang</strong> jika aplikasi dihapus, data aplikasi dibersihkan, atau perangkat diganti. Database lokal juga belum dienkripsi tersendiri, sehingga perlindungannya bergantung pada kunci layar dan keamanan perangkat Anda. Gunakan kunci layar yang kuat.
+  </div>
+  <h3>Di server (autentikasi saja)</h3>
+  <p>Akun Anda dikelola oleh <strong>Supabase</strong>. Supabase menyimpan alamat email, kata sandi ter-hash, dan data teknis sesi. Email juga dipakai untuk mengirim tautan atur ulang kata sandi.</p>
+
+  <h2>4. Layanan Pihak Ketiga</h2>
+  <h3>Supabase (autentikasi)</h3>
+  <p>Menerima email dan kata sandi saat Anda mendaftar atau masuk. Rincian pemrosesannya mengikuti kebijakan privasi Supabase di <a href="https://supabase.com/privacy" rel="noopener">supabase.com/privacy</a>.</p>
+  <h3>Groq (Insight AI)</h3>
+  <p>Saat Anda meminta Insight AI, aplikasi mengirim ke Groq hanya ringkasan berikut:</p>
+  <ul>
+    <li><strong>Analisis pengeluaran:</strong> bulan yang dipilih, total pengeluaran, serta total dan persentase per kategori.</li>
+    <li><strong>Estimasi tujuan:</strong> nama tujuan, target dana, dana terkumpul, setoran bulanan, tanggal target, dan estimasi tanggal tercapai.</li>
+  </ul>
+  <p>Email, foto profil, catatan transaksi, dan tanggal transaksi individual <strong>tidak</strong> ikut dikirim. Karena nama tujuan dikirim apa adanya, hindari menuliskan informasi pribadi sensitif pada nama tujuan jika Anda memakai fitur ini. Hasil analisis hanya berupa saran umum dan <strong>bukan nasihat keuangan profesional</strong>. Kebijakan privasi Groq tersedia di <a href="https://groq.com/privacy-policy" rel="noopener">groq.com/privacy-policy</a>.</p>
+
+  <h2>5. Penggunaan Data</h2>
+  <p>Data Anda digunakan untuk:</p>
+  <ul>
+    <li>Menjalankan fitur aplikasi yang Anda pilih.</li>
+    <li>Membuat Anda tetap masuk dan mengamankan akun.</li>
+    <li>Mengirim notifikasi pengingat yang Anda aktifkan (dijadwalkan di perangkat, tanpa server notifikasi).</li>
+    <li>Menghasilkan Insight AI atas permintaan Anda.</li>
+  </ul>
+  <p>Kami tidak menjual atau menyewakan data Anda, tidak menggunakannya untuk iklan, dan tidak membagikannya kepada pihak lain di luar layanan pada bagian 4.</p>
+
+  <h2>6. Keamanan</h2>
+  <p>Komunikasi dengan Supabase dan Groq berlangsung melalui koneksi terenkripsi (HTTPS). Kata sandi tidak disimpan dalam bentuk teks biasa. Meski begitu, tidak ada sistem yang sepenuhnya bebas risiko. Kami menyarankan Anda memakai kata sandi yang unik dan kunci layar pada perangkat.</p>
+
+  <h2>7. Hak dan Kontrol Anda</h2>
+  <ul>
+    <li><strong>Ubah atau hapus data keuangan:</strong> langsung di aplikasi (transaksi, anggaran, tujuan). Menghapus aplikasi atau membersihkan data aplikasi akan menghapus seluruh data lokal.</li>
+    <li><strong>Matikan pengingat:</strong> melalui menu Profil, atau cabut izin notifikasi di pengaturan perangkat.</li>
+    <li><strong>Keluar akun:</strong> melalui tombol “Keluar dari Aplikasi” di Profil.</li>
+    <li><strong>Akses, koreksi, atau hapus akun:</strong> kirim permintaan ke email kontak di bawah. Kami akan menghapus akun dan email Anda dari layanan autentikasi.</li>
+  </ul>
+  <p>Hak Anda sebagai subjek data mengikuti Undang-Undang No. 27 Tahun 2022 tentang Pelindungan Data Pribadi.</p>
+
+  <h2>8. Anak-Anak</h2>
+  <p>Money Mate tidak ditujukan bagi anak di bawah 13 tahun. Pengguna di bawah 18 tahun sebaiknya memakai aplikasi dengan sepengetahuan orang tua atau wali. Jika Anda menduga ada akun anak tanpa izin orang tua, hubungi kami agar akun tersebut dihapus.</p>
+
+  <h2>9. Perubahan Kebijakan</h2>
+  <p>Kebijakan ini dapat diperbarui, misalnya saat ada fitur baru. Tanggal berlaku di bagian atas halaman akan diperbarui, dan perubahan penting akan kami sampaikan di dalam aplikasi.</p>
+
+  <h2>10. Hubungi Kami</h2>
+  <p>Pertanyaan atau permintaan terkait data pribadi:<br>
+    Pengembang: <span class="placeholder">[Nama pengembang / perusahaan]</span><br>
+    Email: <span class="placeholder">[email-kontak@domain.com]</span>
+  </p>
+
+</main>
+
+<footer>© 2026 Money Mate. Semua hak dilindungi.</footer>
 
 </body>
 </html>
-```
